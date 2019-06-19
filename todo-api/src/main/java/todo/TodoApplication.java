@@ -1,4 +1,4 @@
-package be.ordina.jworks.todoapi;
+package todo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
