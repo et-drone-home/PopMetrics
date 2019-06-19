@@ -1,0 +1,36 @@
+plugins {
+    id 'org.springframework.boot' version '2.1.6.RELEASE'
+    id 'java'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group = 'io'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.twitter4j:twitter4j-core:[4.0,)'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-data-rest'
+    compile 'com.fasterxml.jackson.jr:jackson-jr-all:2.9.0'
+    testCompile 'junit:junit:4.12'
+    testCompile 'org.assertj:assertj-core:3.8.0'
+    testCompile 'io.cucumber:cucumber-java8:4.2.0'
+    testCompile 'io.cucumber:cucumber-junit:4.2.0'
+    testCompile 'org.seleniumhq.selenium:selenium-java:2.41.0'
+    testCompile 'org.seleniumhq.selenium:selenium-chrome-driver:2.23.0'
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
