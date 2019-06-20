@@ -8,7 +8,8 @@ interface Props {
 
 const TwitterMentionsView = ({ counter, onDecrementClick, onIncrementClick }: Props) => (
   <div>
-    <div id="mentions">{counter.toString()}</div>
+    <div id="mentions">1
+    </div>
     <button onClick={onDecrementClick}>-</button>
     <button onClick={onIncrementClick}>+</button>
   </div>
